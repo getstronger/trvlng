@@ -1,11 +1,8 @@
-/less-bootstrap-3
-/font-awesome-4-less
 /iron-router
-/iron-layout
 /blaze-layout
+/spin
+/accounts-ui-bootstrap-dropdown
+/iron-router-progress
+/iron-layout
 /iron-core
 /iron-dynamic-template
-/accounts-ui-bootstrap-dropdown
-/spin
-/moment
-/kadira
