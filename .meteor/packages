@@ -10,8 +10,8 @@ less-bootstrap-3
 font-awesome-4-less
 bootstrap
 iron-router
-accounts-ui-bootstrap-dropdown
 spin
 moment
 kadira
 accounts-password
+accounts-ui-bootstrap-3

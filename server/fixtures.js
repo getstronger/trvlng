@@ -69,4 +69,15 @@ if (Posts.find().count() === 0) {
       upvoters: [], votes: 0
     });
   }
+  for (var i = 0; i < 10; i++) {
+    Events.insert({
+      title: 'Sample Event #' + i,
+      author: sacha.profile.name,
+      userId: sacha._id,
+      url: 'http://google.com/?q=test-' + i,
+      submitted: now - i * 3600 * 1000 + 1,
+      commentsCount: 0,
+      upvoters: [], votes: 0
+    });
+  }
 }

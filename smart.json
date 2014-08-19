@@ -3,9 +3,9 @@
     "less-bootstrap-3": {},
     "font-awesome-4-less": {},
     "iron-router": {},
-    "accounts-ui-bootstrap-dropdown": {},
     "spin": {},
     "moment": {},
-    "kadira": {}
+    "kadira": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }

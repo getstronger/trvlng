@@ -5,10 +5,10 @@
       "less-bootstrap-3": {},
       "font-awesome-4-less": {},
       "iron-router": {},
-      "accounts-ui-bootstrap-dropdown": {},
       "spin": {},
       "moment": {},
-      "kadira": {}
+      "kadira": {},
+      "accounts-ui-bootstrap-3": {}
     },
     "packages": {
       "less-bootstrap-3": {
@@ -26,11 +26,6 @@
         "tag": "v0.8.2",
         "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
       },
-      "accounts-ui-bootstrap-dropdown": {
-        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.8.3",
-        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
-      },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
         "tag": "v2.0.4",
@@ -45,6 +40,11 @@
         "git": "https://github.com/meteorhacks/kadira.git",
         "tag": "v2.4.13",
         "commit": "1f3c1a427084af5a2eca2e299eb65bc01387df8a"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.4",
+        "commit": "9f006ee48d869877d90d54ac75b54550a587df8f"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
