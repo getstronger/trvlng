@@ -1,0 +1,29 @@
+<template name="guysList">
+<div class="row">
+  <div class="col-xs-12">
+<!-- TODO: Enable sorting of Guys -->
+<!--   
+    <ul class="nav nav-pills nav-justified">
+      <li class="{{activeRouteClass 'home' 'newGuys'}}">
+        <a href="{{pathFor 'newGuys'}}">New</a>
+      </li>
+      <li class="{{activeRouteClass  'popularGuys'}}">
+        <a href="{{pathFor 'popularGuys'}}">Best</a>
+      </li>
+    </ul>
+-->
+  </div>
+</div>
+
+  <div class="events-list">
+    {{#each events}}
+      {{> eventItem}}
+    {{/each}}
+    
+    {{#if nextPath}}
+      <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
+      {{else}}
+      <p class="text-centered">You've reached the end of the Guys</p>
+    {{/if}}
+  </div>
+</template>

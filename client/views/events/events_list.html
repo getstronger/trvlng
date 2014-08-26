@@ -1,0 +1,26 @@
+<template name="eventsList">
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="nav nav-pills nav-justified">
+      <li class="{{activeRouteClass 'home' 'newEvents'}}">
+        <a href="{{pathFor 'newEvents'}}">New</a>
+      </li>
+      <li class="{{activeRouteClass  'bestEvents'}}">
+        <a href="{{pathFor 'bestEvents'}}">Best</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="events-list">
+    {{#each events}}
+      {{> eventItem}}
+    {{/each}}
+    
+    {{#if nextPath}}
+      <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
+      {{else}}
+      <p class="text-centered">You've reached the end of the events</p>
+    {{/if}}
+  </div>
+</template>

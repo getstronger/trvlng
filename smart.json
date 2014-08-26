@@ -6,6 +6,12 @@
     "spin": {},
     "moment": {},
     "kadira": {},
-    "accounts-ui-bootstrap-3": {}
+    "simple-schema": {},
+    "autoform": {},
+    "accounts-entry": {},
+    "urlify2": {},
+    "zones": {},
+    "moment-range": {},
+    "moment-twix": {}
   }
 }

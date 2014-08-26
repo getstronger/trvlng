@@ -1,0 +1,106 @@
+<template name="eventSubmit">
+<!--   <form class="main">
+    <div class="control-group">
+        <label class="control-label" for="url">URL</label>
+        <div class="controls">
+            <input name="url" type="text" value="" placeholder="Your URL"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+            <input name="title" type="text" value="" placeholder="Name your event"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="message">Message</label>
+        <div class="controls">
+            <textarea name="message" type="text" value=""></textarea>
+        </div>
+    </div> 
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
+    </div>
+  </form> -->
+
+  <!-- {{> quickForm collection="Events" id="insertEventForm" type="insert"}} -->
+  {{#autoForm collection="Events" id="eventSubmitForm" type="insert" validation="blur"}}
+    <fieldset>
+      <legend>Add an Event</legend>
+        {{> afQuickField name='name'}}
+        {{> afQuickField name='type'}}
+
+        {{#if afFieldValueIs name="type" value="other"}}
+          {{> afQuickField name='customType'}}
+      {{/if}}
+
+        {{> afQuickField name='scene'}}
+        {{> afQuickField name='free'}}
+      {{#if afFieldValueIs name="free" value="false"}}
+          {{> afQuickField name='cost'}}
+      {{/if}}
+        {{> afQuickField name='organizer'}}
+        {{> afQuickField name='status'}}
+        {{> afQuickField name='description' rows=6}}
+        {{> afQuickField name='website'}}
+
+    </fieldset>
+    <fieldset>
+      <legend>When</legend>
+      {{> afQuickField name='startDate'}}
+      {{> afQuickField name='endDate'}}
+      {{> afQuickField name='recurrance'}}
+  </fieldset>
+  <fieldset>
+      <legend>Where?</legend>
+      <!-- TODO: correct form rendering sub schema -->
+      {{> afQuickField name='location.streetAddress'}}
+      {{> afQuickField name='location.neighborhood'}}
+      {{> afQuickField name='location.addressLocality'}}
+      {{> afQuickField name='location.addressRegion'}}
+      {{> afQuickField name='location.postalCode'}}
+  </fieldset>
+    <fieldset>
+      <legend>Social</legend>
+      <!-- TODO: correct form rendering sub schema -->
+      
+
+  <div class="form-group">
+    <div class="input-group input-group-lg">
+      <div class="input-group-addon"><i class="fa fa-fw fa-facebook"></i></div>
+      {{> afFieldInput name='social.facebook'}}
+    </div>
+  </div>
+<div class="form-group">
+    <div class="input-group input-group-lg">
+      <div class="input-group-addon"><i class="fa fa-fw fa-twitter"></i></div>
+      {{> afFieldInput name='social.twitter'}}
+    </div>
+  </div>
+<div class="form-group">
+    <div class="input-group input-group-lg">
+      <div class="input-group-addon"><i class="fa fa-fw fa-google-plus"></i></div>
+      {{> afFieldInput name='social.googleplus'}}
+    </div>
+  </div>
+<div class="form-group">
+    <div class="input-group input-group-lg">
+      <div class="input-group-addon"><i class="fa fa-fw fa-facebook"></i></div>
+      {{> afFieldInput name='social.instagram'}}
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group input-group-lg">
+      <div class="input-group-addon"><i class="fa fa-fw ">#</i></div>
+      {{> afFieldInput name='social.hashtag'}}
+    </div>
+  </div>
+  </fieldset>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Add Event</button>
+  {{/autoForm}}
+</template>

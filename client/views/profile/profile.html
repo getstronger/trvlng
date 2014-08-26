@@ -1,0 +1,84 @@
+<template name="userProfile">
+{{#with profile}}
+  <div class="profile">
+    <div class="row">
+      <div class="col-xs-12 user-details">
+      <div class=" cover-image">
+            <img src="http://placehold.it/1200x300" alt="Karan Singh Sisodia" class="img-responsive">
+        </div>
+        <div class="user-image">
+            <img src="http://placehold.it/100x100" alt="Karan Singh Sisodia" class="img-circle avatar">
+        </div>
+        <div class="user-info-block">
+            <div class="user-heading">
+                <h3>
+                {{name}}</h3>
+                <span class="help-block">{{location}}</span>
+            </div>
+            <ul class="list-inline list-unstyled">
+                <li class="active">
+                    <a data-toggle="tab" href="#information">
+                        <i class="fa fa-fw fa-2x fa-info"></i>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#email">
+                        <i class="fa fa-fw fa-2x fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#events">
+                        <i class="fa fa-fw fa-2x fa-calendar"></i>
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#galleries">
+                        <i class="fa fa-fw fa-2x fa-book"></i>
+                    </a>
+                </li>
+                {{#if currentUser}}
+                <li>
+                    <a data-toggle="tab" href="#settings">
+                        <i class="fa fa-fw fa-2x fa-gear"></i>
+                    </a>
+                </li>
+                {{/if}}
+            </ul>
+            <div class="user-body">
+                <div class="tab-content">
+                    <div id="information" class="tab-pane active">
+                      <h4>Information</h4>
+                      <section>
+                        <h5>Sentence</h5>
+                        {{sentence}}
+                      </section>
+                      <section>
+                        <h5>Scenes</h5>
+                        {{scenes}}
+                      </section>
+                      <section>
+                        <h5>Badges</h5>
+                        {{badges}}
+                      </section>
+                      <section>
+                        <h5>Attending</h5>
+                        {{attending}}
+                      </section>
+                    </div>
+                    <div id="email" class="tab-pane">
+                        <h4>Send Message</h4>
+                    </div>
+                    <div id="events" class="tab-pane">
+                        <h4>Events</h4>
+                    </div>
+                    <div id="settings" class="tab-pane">
+                        <h4>Settings</h4>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  </div>
+{{/with}}
+</template>

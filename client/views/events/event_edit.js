@@ -1,20 +1,20 @@
-Template.postEdit.events({
+Template.eventEdit.events({
   'submit form': function(e) {
     e.preventDefault();
     
-    var currentPostId = this._id;
+    var currentEventId = this._id;
     
-    var postProperties = {
+    var eventProperties = {
       url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val()
     }
     
-    Posts.update(currentPostId, {$set: postProperties}, function(error) {
+    Event.update(currentEventId, {$set: eventProperties}, function(error) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
       } else {
-        Router.go('postPage', {_id: currentPostId});
+        Router.go('eventPage', {_id: currentEventId});
       }
     });
   },
@@ -22,9 +22,9 @@ Template.postEdit.events({
   'click .delete': function(e) {
     e.preventDefault();
     
-    if (confirm("Delete this post?")) {
-      var currentPostId = this._id;
-      Posts.remove(currentPostId);
+    if (confirm("Delete this event?")) {
+      var currentEventId = this._id;
+      Event.remove(currentEventId);
       Router.go('home');
     }
   }

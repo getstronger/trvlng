@@ -1,20 +1,20 @@
-Meteor.publish('posts', function(options) {
-  return Posts.find({}, options);
+Meteor.publish('events', function(options) {
+  return Events.find({}, options);
 });
 
-Meteor.publish('singlePost', function(id) {
-  return id && Posts.find(id);
+Meteor.publish('singleEvent', function(id) {
+  return id && Events.find(id);
 });
 
 
-Meteor.publish('comments', function(postId) {
-  return Comments.find({postId: postId});
+Meteor.publish('comments', function(eventID) {
+  return Comments.find({eventID: eventID});
 });
 
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId});
 });
 
-Meteor.publish('events', function() {
-  return Posts.find();
+Meteor.publish('users', function() {
+  return Notifications.find({userId: this.userId});
 });

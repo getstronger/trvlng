@@ -1,9 +1,23 @@
 <template name="eventItem">
-  <div class="event">
-    <div class="event-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+  <div class="card event">
+  <div class="card-heading">
+  {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
+  <a href="#" class="attend btn {{attendededClass}}">attend</a>
+    <a href="{{pathFor 'eventPage'}}">
+      <img src="http://placehold.it/1200x630" class="img-responsive">
+    </a>
+  </div>
+    <div class="card-body event-content">
+      <h3><a href="{{pathFor 'eventPage'}}">{{name}}</a></h3>
       <p>
-        submitted by {{author}},
+        <span class="city">{{location.addressLocality}}</span><br>
+        <span class="begins">{{dateRange}}</span>
+        <div class="row">
+          <div class="col-xs-3">
+          <i class="fa fa-fw fa-users"></i><br>
+          <a href="{{pathFor 'eventPage'}}">{{pluralize travelers "travel"}}</a>
+          </div>
+        </div>
       </p>
     </div>
   </div>
