@@ -7,7 +7,7 @@ Events.allow({
 });
 
 Events.deny({
-  update: function(userId, post, fieldNames) {
+  update: function(userId, event, fieldNames) {
     // may only edit the following two fields:
     return (_.without(fieldNames, 'url', 'title').length > 0);
   }
@@ -20,7 +20,7 @@ Meteor.methods({
     
     // ensure the user is logged in
     if (!user)
-      throw new Meteor.Error(401, "You need to login to post new stories");
+      throw new Meteor.Error(401, "You need to login to post new events");
     
     // ensure the post has a title
     if (!eventAttributes.title)
@@ -39,7 +39,8 @@ Meteor.methods({
       author: user.username, 
       submitted: new Date().getTime(),
       commentsCount: 0,
-      upvoters: [], votes: 0
+      attending:[],
+      attendees: 0
     });
     
     var eventId = Events.insert(event);
@@ -53,11 +54,11 @@ Meteor.methods({
       throw new Meteor.Error(401, "You need to login to attend");
     
     Events.update({
-      _id: eventId, 
-      attendees: {$ne: user._id}
-    }, {
-      $addToSet: {attendees: user._id},
-      $inc: {travelers: 1}
+      _id: EventId, 
+      attending: {$ne: user._id}
+    },{
+      $addToSet: {attending: user._id},
+      $inc: {attendees: 1}
     });
   }
 

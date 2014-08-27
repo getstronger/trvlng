@@ -13,12 +13,24 @@ Template.eventItem.helpers({
   var range = moment(startTime).twix(endTime, {allDay: true});
   return range.format();
   },
-  attendedClass: function() { // If the user is currently logged in and has not already RSVP-ed, allow them to attend
+  attendClass: function() { // If the user is currently logged in and has not already RSVP-ed, allow them to attend
     var userId = Meteor.userId();
-    if (userId && !_.include(this.attendees, userId)) {
+    if (userId && !_.include(this.attending, userId)) {
       return 'btn-primary attendable';
+    } else if (userId && _.include(this.attending, userId)){ // User is attending
+      return 'attending disabled'
     } else {
       return 'disabled';
+    }
+  },
+  attendText: function() { // If the user is currently logged in and has not already RSVP-ed, allow them to attend
+    var userId = Meteor.userId();
+    if (userId && !_.include(this.attending, userId)) {
+      return 'attend';
+    } else if (userId && _.include(this.attending, userId)){
+      return 'attending'
+    } else {
+      return 'attend';
     }
   }
 });

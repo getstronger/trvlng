@@ -2,7 +2,7 @@
   <div class="card event">
   <div class="card-heading">
   {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
-  <a href="#" class="attend btn {{attendededClass}}">attend</a>
+  <a href="#" class="attend btn {{attendClass}}">{{attendText}}</a>
     <a href="{{pathFor 'eventPage'}}">
       <img src="http://placehold.it/1200x630" class="img-responsive">
     </a>
@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-xs-3">
           <i class="fa fa-fw fa-users"></i><br>
-          <a href="{{pathFor 'eventPage'}}">{{pluralize travelers "travel"}}</a>
+          <a href="{{pathFor 'eventPage'}}">{{pluralize attendees "attendee"}}</a>
           </div>
         </div>
       </p>

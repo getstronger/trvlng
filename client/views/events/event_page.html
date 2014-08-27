@@ -4,5 +4,21 @@
 </template>
 
 <template name="eventDetails">
-So much more information.
+<h4>Get There</h4>
+<img class="img-responsive" src="http://placehold.it/1200x300&text=map">
+
+{{name}}
+{{startDate}}
+<p>{{location.streetAddress}}<br>
+{{location.neighborhood}}<br>
+{{location.addressLocality}}<br>
+{{location.addressRegion}}</p>
+
+<h4>Who's going?</h4>
+
+{{#if currentUser}}
+<!-- {{> guyView}} -->
+{{else}}
+<p>You need to sign in to see who will be there.</p>
+{{/if}}
 </template>
