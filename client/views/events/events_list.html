@@ -1,5 +1,19 @@
 <template name="eventsList">
-<div class="row">
+<!-- Toggle Filter and Search Options -->
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <ul class="nav nav-pills nav-justified">
+      <li class="">
+        <a href="#"><i class="fa fa-filter"></i></a>
+      </li>
+      <li class="">
+        <a href="#"><i class="fa fa-search"></i></a>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<!-- Local Navigation -->
+<div class="row bar bar-standard bar-static">
   <div class="col-xs-12">
     <ul class="nav nav-pills nav-justified">
       <li class="{{activeRouteClass 'home' 'newEvents'}}">
@@ -8,19 +22,23 @@
       <li class="{{activeRouteClass  'bestEvents'}}">
         <a href="{{pathFor 'bestEvents'}}">Best</a>
       </li>
+      <li class="{{activeRouteClass  'filterEvents'}}">
+        <a href="{{pathFor 'filterEvents'}}">Filter</a>
+      </li>
     </ul>
   </div>
 </div>
 
-  <div class="events-list">
+  <ul class="events-list card-stack">
     {{#each events}}
+    <li class="card-stack-item">
       {{> eventItem}}
+    </li>
     {{/each}}
-    
+  </ul>
     {{#if nextPath}}
       <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
       {{else}}
       <p class="text-centered">You've reached the end of the events</p>
     {{/if}}
-  </div>
 </template>

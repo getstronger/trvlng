@@ -1,3 +1,12 @@
+// This File is for you to modify!
+// It won't be overwritten as long as it exists.
+// You may include this file into your less files to benefit from
+// mixins and variables that bootstrap provides.
+
+@import "custom.bootstrap.mixins.import.less";
+
+
+// @import "bootstrap/less/variables.less"
 //
 // Variables
 // --------------------------------------------------
@@ -7,50 +16,25 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-darker:            #1F1F22;
-@gray-dark:              #2F2F33;
-@gray:                   #4F4F55;
-@gray-light:             #8E8E99;
-@gray-lighter:           #E6E6ED;
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 46.7%); // #777
+@gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:          #196680;
-@brand-success:          #21A64A;
-@brand-info:             #02B1C9;
-@brand-warning:          #F39C12;
-@brand-danger:           #E74C3C;
-@fb-color:               #3b5998;
-@tw-color:               #55acee;
-
-
-//== PractiecUpdate Additional Colors
-//
-//## Black, white, rich black, rich white
-@white:                  #FFF;
-@black:                  #000;
-@new:                    #f9d11d;
-@free:                   #70cf8d;
-@video:                  #887e6f;
-
-// TODO: copy rich variant hex values from pu-colors.ai
-//@black-rich:;
-//@white-rich:;
-
-//** beige values
-@beige-darker:            #22201C;
-@beige-dark:              #333129;
-@beige:                   #555245;
-@beige-light:             #99947C;
-@beige-lighter:           #EDEAD5;
-
-//** accent colors
+@brand-primary:         #428bca;
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
 
 
 //== Scaffolding
 //
-// ## Settings for some of the most global styles.
+//## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #f9f9f7; // lighten(@beige-lighter, 10%);
+@body-bg:               #fff;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -58,23 +42,14 @@
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
-@link-visited-color:    lighten(desaturate(@link-color, 40%), 30%);
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-// Add Typekit fonts with Standard bootstrap fallbacks
-
-@font-family-serif: "museo-slab", Rockwell, Georgia, "Times New Roman", Times, serif;
-@font-family-sans-serif: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-@font-family-sans-serif-condensed: "proxima-nova-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-@font-family-title: @font-family-sans-serif-condensed;
-
-
-// @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-// @font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -102,13 +77,17 @@
 @headings-color:          inherit;
 
 
-//-- Iconography
+//== Iconography
 //
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
+//** Load fonts from this directory.
 @icon-font-path:          "../fonts/";
+//** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
 @icon-font-svg-id:        "glyphicons_halflingsregular";
+
 
 //== Components
 //
@@ -132,7 +111,6 @@
 @border-radius-base:        4px;
 @border-radius-large:       6px;
 @border-radius-small:       3px;
-@border-radius-xlarge:      20px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -196,10 +174,6 @@
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
-@btn-empty-color:               #333;
-@btn-empty-bg:                  @white;
-@btn-empty-border:              darken(@btn-empty-bg, 5%);
-
 @btn-link-disabled-color:        @gray-light;
 
 
@@ -225,7 +199,7 @@
 @input-color-placeholder:        @gray-light;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 4) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
 //** Large `.form-control` height
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height
@@ -271,7 +245,7 @@
 //** Text color for headers within dropdown menus.
 @dropdown-header-color:          @gray-light;
 
-// Note: Deprecated @dropdown-caret-color as of v3.1.0
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
 @dropdown-caret-color:           #000;
 
 
@@ -284,54 +258,44 @@
 
 @zindex-navbar:            1000;
 @zindex-dropdown:          1000;
-@zindex-popover:           1010;
-@zindex-tooltip:           1030;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
 @zindex-navbar-fixed:      1030;
 @zindex-modal-background:  1040;
 @zindex-modal:             1050;
 
-//
-// For reference
-// IAB z-index guidelines
-//
-// Z-Index Range Content Type  Details
-//
-// < 0                    Background Elements
-// 0 - 4,999              Main Content, Standard Ads  Standard ad tags in place with regular content. Includes OBA Self Regulation Message (CLEAR Ad Notice)
-// 5,000 - 1,999,999      Expanding Advertising   The entire expandable ad unit should be set within this range
-// 2,000,000 - 2,999,999  Floating Advertising  Over The Page ads (OTP's)
-// 3,000,000 - 3,999,999  Pop-up Elements   Chat windows, message notifications
-// 4,000,000 - 4,999,999  Non-anchored Floating Elements  Survey recruitment panels
-// 5,000,000 - 5,999,999  Expanding Site Navigation Elements  Drop down navigation, site warnings, etc. Only the expanding portion of navigation elements should be included on this level.
-// 6,000,000+             Full-page Overlays  Full-window Over-the-Page (OTP) ads and Between-the-Page ads IF they cover page content
-//
 
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
 // Extra small screen / phone
-// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+//** Deprecated `@screen-xs` as of v3.0.1
 @screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
 @screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
 @screen-phone:               @screen-xs-min;
 
 // Small screen / tablet
-// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+//** Deprecated `@screen-sm` as of v3.0.1
 @screen-sm:                  768px;
 @screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
 
 // Medium screen / desktop
-// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+//** Deprecated `@screen-md` as of v3.0.1
 @screen-md:                  992px;
 @screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
 @screen-desktop:             @screen-md-min;
 
 // Large screen / wide desktop
-// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+//** Deprecated `@screen-lg` as of v3.0.1
 @screen-lg:                  1200px;
 @screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop:          @screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
@@ -350,7 +314,7 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-lg;
+@grid-float-breakpoint:     @screen-sm-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -380,7 +344,7 @@
 //##
 
 // Basics of a navbar
-//@navbar-height:                    50px;
+@navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -388,7 +352,7 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                @body-bg;
+@navbar-default-bg:                #f8f8f8;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
@@ -436,23 +400,6 @@
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
 @navbar-inverse-toggle-border-color:        #333;
 
-// Slide Nav
-@slidenav-bg:                               @body-bg;
-// @sidenav-border:                            transparent;
-@slidenav-link-color:                       @gray;
-@slidenav-link-hover-color:                 #d75142; //@gray;
-@slidenav-link-hover-bg:                    @component-active-bg;
-@slidenav-width:                            250px;
-@slidenav-narrow-width:                     50px;
-
-// Slide Sub-Nav
-@slidenav-subnav-bg:                        #393939;
-@slidenav-subnav-separator-color:           #959595;
-@slidenav-subnav-separator-bg:              #515151;
-@slidenav-subnav-link-color:                #d9d9d9;
-@slidenav-subnav-link-hover-color:          #fff;
-@slidenav-subnav-link-hover-bg:             #666;
-@slidenav-subnav-width:                     @slidenav-width;
 
 //== Navs
 //
@@ -460,22 +407,12 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         darken(@body-bg, 3%);
+@nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
 
 @nav-open-link-hover-color:                 #fff;
-
-
-//== Small dropdown
-//
-//##
-
-@mega-dropdown-sm-size:                     220px;
-@mega-dropdown-sm-bg-opacity:               rgba(225,225,225,0.7);
-@mega-dropdown-sm-bg-semi-opacity:          rgba(225,225,225,0.95);
-
 
 //== Tabs
 @nav-tabs-border-color:                     #ddd;
@@ -537,9 +474,9 @@
 //##
 
 @jumbotron-padding:              30px;
-@jumbotron-color:                @gray-light;
-@jumbotron-bg:                   #132747;
-@jumbotron-heading-color:        @gray-lighter;
+@jumbotron-color:                inherit;
+@jumbotron-bg:                   @gray-lighter;
+@jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
 
@@ -563,29 +500,6 @@
 @state-danger-bg:                #f2dede;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
-// Callouts
-// -------------------------
-//## Define styles for callouts
-
-@callout-padding:               20px;
-@callout-border-radius:         0;
-@callout-border:                @gray-lighter;
-
-@callout-success-bg:            #f4f8fa;
-@callout-success-text:          @state-success-text;
-@callout-success-border:        @state-success-border;
-
-@callout-info-bg:               #f4f8fa;
-@callout-info-text:             @state-info-text;
-@callout-info-border:           @state-info-border;
-
-@callout-warning-bg:            #faf8f0;
-@callout-warning-text:          @state-warning-text;
-@callout-warning-border:        @state-warning-border;
-
-@callout-danger-bg:             #fdf7f7;
-@callout-danger-text:           @state-danger-text;
-@callout-danger-border:         @state-danger-border;
 
 //== Tooltips
 //
@@ -662,7 +576,7 @@
 //##
 
 //** Padding applied to the modal body
-@modal-inner-padding:         20px;
+@modal-inner-padding:         15px;
 
 //** Padding applied to the modal title
 @modal-title-padding:         15px;
@@ -743,29 +657,32 @@
 //** Background color on `.list-group-item`
 @list-group-bg:                 #fff;
 //** `.list-group-item` border color
-@list-group-border:             @gray-lighter;
+@list-group-border:             #ddd;
 //** List group border radius
-@list-group-border-radius:      0;
-//** List-group-item padding-top, padding-bottom
-@list-group-padding-vertical:      10px;
-//** List-group-item padding-right, padding-left
-@list-group-padding-horizontal:      15px;
+@list-group-border-radius:      @border-radius-base;
 
-//** increase border for contextual variants
-@list-group-variant-border-width:      7px;
-
-//** Background color of single list elements on hover
+//** Background color of single list items on hover
 @list-group-hover-bg:           #f5f5f5;
-//** Text color of active list elements
+//** Text color of active list items
 @list-group-active-color:       @component-active-color;
-//** Background color of active list elements
+//** Background color of active list items
 @list-group-active-bg:          @component-active-bg;
 //** Border color of active list elements
 @list-group-active-border:      @list-group-active-bg;
+//** Text color for content within active list items
 @list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
 
+//** Text color of disabled list items
+@list-group-disabled-color:      @gray-light;
+//** Background color of disabled list items
+@list-group-disabled-bg:         @gray-lighter;
+//** Text color for content within disabled list items
+@list-group-disabled-text-color: @list-group-disabled-color;
+
 @list-group-link-color:         #555;
+@list-group-link-hover-color:   @list-group-link-color;
 @list-group-link-heading-color: #333;
+
 
 //== Panels
 //
@@ -773,15 +690,17 @@
 
 @panel-bg:                    #fff;
 @panel-body-padding:          15px;
-@panel-border-radius:         @border-radius-small;
+@panel-heading-padding:       10px 15px;
+@panel-footer-padding:        @panel-heading-padding;
+@panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          darken(@gray-lighter, 3%);
-@panel-footer-bg:             @gray-light;
+@panel-inner-border:          #ddd;
+@panel-footer-bg:             #f5f5f5;
 
 @panel-default-text:          @gray-dark;
-@panel-default-border:        darken(@gray-lighter, 3%);
-@panel-default-heading-bg:    lighten(@gray-lighter, 5%);
+@panel-default-border:        #ddd;
+@panel-default-heading-bg:    #f5f5f5;
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;
@@ -912,6 +831,8 @@
 //
 //##
 
+//** Horizontal offset for forms and lists.
+@component-offset-horizontal: 180px;
 //** Text muted color
 @text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
@@ -926,22 +847,9 @@
 @blockquote-border-color:     @gray-lighter;
 //** Page header border color
 @page-header-border-color:    @gray-lighter;
-
-
-//== Miscellaneous
-//
-//##
-
+//** Width of horizontal description list titles
+@dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 
-//** Horizontal offset for forms and lists.
-@component-offset-horizontal: 180px;
 
-//== PracticeUpdate Component Variables
-//
-//##
-
-// Cards
-// -------------------------
-@card-footer-bg:     #F8F8F8;

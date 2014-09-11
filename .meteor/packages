@@ -3,27 +3,25 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
+meteor-platform
+autopublish
 insecure
 less
-less-bootstrap-3
-font-awesome-4-less
-iron-router
-spin
-moment
-accounts-password
-simple-schema
-autoform
-accounts-entry
-accounts-ui
-urlify2
-zones
-autopublish
-collection2
-moment-range
-moment-twix
+aldeed:autoform
+aldeed:collection2
+aldeed:simple-schema
+iron:router
+joshowens:accounts-entry
+kevbuk:moment-range
+manuelschoebel:less-bootstrap-3
+manuelschoebel:less-fontawesome-4
+mquandalle:bower
+sacha:spin
 sewdn:velocityjs
-meteorhacks:npm
+splendido:moment-twix
+mrt:moment
+mrt:urlify2
+meteorhacks:kadira
+mrt:mailchimp
+meteorhacks:zones
 
-
-npm-container

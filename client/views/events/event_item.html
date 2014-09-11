@@ -1,24 +1,28 @@
 <template name="eventItem">
   <div class="card event">
-  <div class="card-heading">
-  {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
-  <a href="#" class="attend btn {{attendClass}}">{{attendText}}</a>
-    <a href="{{pathFor 'eventPage'}}">
-      <img src="http://placehold.it/1200x630" class="img-responsive">
-    </a>
-  </div>
-    <div class="card-body event-content">
-      <h3><a href="{{pathFor 'eventPage'}}">{{name}}</a></h3>
-      <p>
-        <span class="city">{{location.addressLocality}}</span><br>
-        <span class="begins">{{dateRange}}</span>
-        <div class="row">
+    <div class="card-content">
+      <div class="card-heading">
+      {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
+      <a href="#" class="attend btn {{attendClass}}">{{attendText}}</a>
+      </div>
+      <div class="card-media">
+        <a href="{{pathFor 'eventPage'}}">
+          <img src="http://placehold.it/1200x630" class="img-responsive">
+        </a>
+      </div>
+      <div class="card-body event-content">
+        <h3 class="title event-title card-title"><a href="{{pathFor 'eventPage'}}">{{name}}</a></h3>
+        <p>
+          <span class="city">{{location.addressLocality}}</span><br>
+          <span class="begins">{{dateRange}}</span>
+        </p>
+        <div class="row card-actions">
           <div class="col-xs-3">
-          <i class="fa fa-fw fa-users"></i><br>
-          <a href="{{pathFor 'eventPage'}}">{{pluralize attendees "attendee"}}</a>
+            <i class="fa fa-fw fa-users"></i><br>
+            <a href="{{pathFor 'eventPage'}}">{{pluralize attendees "attendee"}}</a>
           </div>
         </div>
-      </p>
+      </div>
     </div>
   </div>
 </template>

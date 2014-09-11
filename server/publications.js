@@ -18,3 +18,7 @@ Meteor.publish('notifications', function() {
 Meteor.publish('users', function() {
   return Notifications.find({userId: this.userId});
 });
+
+Meteor.publish('currentUser', function() {
+  return Meteor.users.find(this.userId, {fields: {createdAt: 1, intercomHash: 1}});
+});

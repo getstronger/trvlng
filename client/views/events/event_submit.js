@@ -1,6 +1,11 @@
+Template.eventSubmit.helpers({
+  // 'eventCreatedBy': function(e) {
+  //   return Meteor.userId();
+  // }
+});
 Template.eventSubmit.events({
-  'submit form': function(e) {
-    e.preventDefault();
+  // 'submit form': function(e) {
+    // e.preventDefault();
     
     // var event = {
     //   url: $(e.target).find('[name=url]').val(),
@@ -19,5 +24,5 @@ Template.eventSubmit.events({
     //     Router.go('eventPage', {_id: id});
     //   }
     // });
-  }
+  // }
 });

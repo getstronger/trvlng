@@ -30,6 +30,10 @@
 
   <!-- {{> quickForm collection="Events" id="insertEventForm" type="insert"}} -->
   {{#autoForm collection="Events" id="eventSubmitForm" type="insert" validation="blur"}}
+
+    {{> afFieldInput name="createdBy" type="hidden"}}
+    {{> afFieldInput name="attendees" type="hidden"}}
+    {{> afFieldInput name="attending" type="hidden"}}
     <fieldset>
       <legend>Add an Event</legend>
         {{> afQuickField name='name'}}
@@ -90,7 +94,7 @@
   </div>
 <div class="form-group">
     <div class="input-group input-group-lg">
-      <div class="input-group-addon"><i class="fa fa-fw fa-facebook"></i></div>
+      <div class="input-group-addon"><i class="fa fa-fw fa-instagram"></i></div>
       {{> afFieldInput name='social.instagram'}}
     </div>
   </div>

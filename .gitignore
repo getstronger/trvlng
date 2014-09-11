@@ -1,0 +1,8 @@
+# meteor local build files
+
+.meteor/local
+.meteor/meteorite
+
+# IDE and Editor files
+
+.idea

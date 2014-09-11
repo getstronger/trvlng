@@ -1,0 +1,17 @@
+<template name="guyItem">
+
+  <div class="card guy">
+  <div class="card-heading">
+    <a href="{{pathFor 'userProfile'}}">
+      <img src="http://placehold.it/300x300" class="img-responsive avatar">
+    </a>
+  </div>
+    <div class="card-body guy-content">
+      <h3><a href="{{pathFor 'guyPage'}}">{{screenName}}</a></h3>
+      <p>
+        {{sentence}}
+        <img src="holder.js/100x100" class="img-responsive avatar">
+      </p>
+    </div>
+  </div>
+</template>

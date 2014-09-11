@@ -1,37 +1,36 @@
 <template name="header">
-  <header class="navbar navbar-default navbar-static-top" role="navigation">
+  <header class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#trvlngMainNav">
+        <button type="button" class="navbar-toggle so-menu-toggle">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">TRVLNG</a>
+        <span class="navbar-brand navbar-center">TRVLNG</span>
         <!-- <img src="img/trvlng.svg"> -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#trvlngMainNav"></button>
       </div>
-      <div class="collapse navbar-collapse" id="trvlngMainNav">
-        <ul class="nav navbar-nav">
-          <li class="{{activeRouteClass 'home' 'newEvents'}}">
-            <a href="{{pathFor 'newEvents'}}">Events</a>
-          </li>
-          <li class="{{activeRouteClass  'guys'}}">
-            <a href="{{pathFor 'guys'}}">Guys</a>
-          </li>
+
+      <div class="" id="trvlngMainNav">
+        <ul class="nav navbar-nav pull-left">
           {{#if currentUser}}
           <li class="{{activeRouteClass 'eventSubmit'}}">
-            <a href="{{pathFor 'eventSubmit'}}">Submit Event</a>
+            <a href="{{pathFor 'eventSubmit'}}"><i class="fa fa-plus"></i></a>
           </li>
-          <!--             <li class="">
-              {{> notifications}}
-            </li> -->
+          <li class="">
+            {{> notifications}}
+          </li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav pull-right">
-          {{> accountButtons}}
+          <li class="so-search-toggle">
+            <a href="#"><i class="fa fa-search"></i></a>
+          </li>
         </ul>
       </div>
+      
     </div>
   </header>
 </template>

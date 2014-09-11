@@ -1,8 +1,8 @@
 // Import Vendors
-// mrt add less-bootstrap-3
-@import "../../packages/less-bootstrap-3/lib/less/bootstrap.import.less";
+@import "vendor/custom.bootstrap.mixins.import.less";
+@import "vendor/custom.bootstrap.import.less";
 // mrt add font-awesome-4-less
-@import "../../packages/font-awesome-4-less/font-awesome.import.less";
+// @import "../../packages/font-awesome-4-less/font-awesome.import.less";
 
 // Vendor Variables
 @import "variables_bootstrap.import.less";
@@ -11,8 +11,13 @@
 // Components
 @import "components/a_component.import.less";
 @import "components/_card.import.less";
+@import "components/_navbar.import.less";
+@import "components/_bar.import.less";
+
+// Globals
+@import "typo.import.less";
 
 // Sites
 @import "sites/bootswatch.import.less";
 @import "sites/variables.import.less";
-@import "sites/home.import.less";
+@import "sites/trvlng.import.less";
