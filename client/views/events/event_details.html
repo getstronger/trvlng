@@ -9,16 +9,10 @@
         {{location.addressLocality}}<br>
         {{location.addressRegion}}</p>
     <h4>Scene</h4>
-    <ul>
-        {{scene}}
-        {{#each scene}}
-            <li>{{this}}</li>
-        {{/each}}
-
-        {{#each eventScenes}}
-            poop
-        {{/each}}
-
+    <ul class="list-inline scene-list">
+      {{#each eventScenes}}
+      <li><img class="img-circle" src="{{image}}"><span class="scene-title">{{this.name}}</span></li>
+      {{/each}}
     </ul>
     <h4>Who's going?</h4>
     {{eventAttendees}}

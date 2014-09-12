@@ -1,7 +1,6 @@
 Template.eventDetails.helpers({
     eventScenes: function(){
-        var getScenes = Scenes.find( { _id: { $in: this.scene } } ).fetch(); //find all scenes that are present in the current document's scene array
-        return getScenes;
+        return Scenes.find( { _id: { $in: this.scene }}, {name: 1, image: 1, _id: 0}); //find all scenes that are present in the current document's scene array
     },
     eventAttendees: function(){
         return 'poop';
