@@ -30,7 +30,11 @@ if (Meteor.isServer) {
                     address: "bradcstrong@gmail.com",
                     verified: true
                 }],
-                profile: {name: 'Brad Strong'}
+                profile: {
+                  name: 'Brad Strong',
+                  nameGiven: 'Brad',
+                  nameSurname: 'Strong'
+                }
             });
             var brad = Meteor.users.findOne(bradId);
             Accounts.setPassword(brad._id, 'Trvlng11');
@@ -75,6 +79,34 @@ if (Meteor.isServer) {
             });
             var chris = Meteor.users.findOne(chrisId);
         }
+      // Fixture Data for Scenes
+
+      if (Scenes.find().count() === 0) {
+        var defaultScenes = ['leather', 'cosplay', 'bear', 'daddy', 'circuit boy', 'twink', 'gym rat', 'geek', 'fetish', 'general gay'];
+        for (var i = 0; i < defaultScenes.length; i++) {
+          Scenes.insert({
+            name: defaultScenes[i],
+            // url: 'http://google.com/?q=test-' + i,
+            image: "http://placehold.it/300x300",
+            description: "This scene is named" + " " + defaultScenes[i]
+          });
+        }
+      }
+
+// Fixture Data for Badges
+
+      if (Badges.find().count() === 0) {
+        var defaultBadges = ['Drag Hag', 'Pup in Training', 'Circuit Queen', 'Muscle Mary', 'Daddy Bear', 'Sir', 'Kweeeen', 'Gaymer', 'Sadomaster'];
+        for (var i = 0; i < defaultBadges.length; i++) {
+          Badges.insert({
+            name: defaultBadges[i],
+            // url: 'http://google.com/?q=test-' + i,
+            image: "http://placehold.it/300x300",
+            description: "This scene is named" + " " + defaultBadges[i]
+          });
+        }
+      }
+
         // Fixture Data Events
         // Users must be present
         if (Events.find().count() === 0) {
@@ -145,33 +177,7 @@ if (Meteor.isServer) {
             // }
         }
 
-// Fixture Data for Scenes
 
-        if (Scenes.find().count() === 0) {
-            var defaultScenes = ['leather', 'cosplay', 'bear', 'daddy', 'circuit boy', 'twink', 'gym rat', 'geek', 'fetish', 'general gay'];
-            for (var i = 0; i < defaultScenes.length; i++) {
-                Scenes.insert({
-                    name: defaultScenes[i],
-                    // url: 'http://google.com/?q=test-' + i,
-                    image: "http://placehold.it/300x300",
-                    description: "This scene is named" + " " + defaultScenes[i]
-                });
-            }
-        }
-
-// Fixture Data for Badges
-
-        if (Badges.find().count() === 0) {
-            var defaultBadges = ['Drag Hag', 'Pup in Training', 'Circuit Queen', 'Muscle Mary', 'Daddy Bear', 'Sir', 'Kweeeen', 'Gaymer', 'Sadomaster'];
-            for (var i = 0; i < defaultBadges.length; i++) {
-                Badges.insert({
-                    name: defaultBadges[i],
-                    // url: 'http://google.com/?q=test-' + i,
-                    image: "http://placehold.it/300x300",
-                    description: "This scene is named" + " " + defaultBadges[i]
-                });
-            }
-        }
 
 // users: {
 //   type: [Object]

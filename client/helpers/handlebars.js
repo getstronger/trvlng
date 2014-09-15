@@ -17,3 +17,7 @@ Handlebars.registerHelper('activeRouteClass', function(/* route names */) {
   
   return active && 'active';
 });
+
+UI.registerHelper("formatDate", function(datetime, format) {
+  return moment(datetime).format(format);
+});

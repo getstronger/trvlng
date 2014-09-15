@@ -1,0 +1,8 @@
+<template name="editProfile">
+
+    {{#autoForm collection="Meteor.users" schema=User doc=userProfile id="profileEditor" type="update"}}
+        {{> afObjectField name='profile'}}
+      <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+
+</template>

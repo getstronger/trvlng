@@ -21,25 +21,25 @@
     {{#with social}}
         <ul class="event-social-list fa-ul list-unstyled">
             {{#if facebook}}
-              <li><i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" _target="blank">facebook</a> </li>
+              <li><i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" target="_blank">facebook</a> </li>
             {{/if}}
 
             {{#if googleplus}}
-              <li><i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" _target="blank">google+</a></li>
+              <li><i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" target="_blank">google+</a></li>
             {{/if}}
 
             {{#if instagram}}
-              <li><i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" _target="blank">instagram</a></li>
+              <li><i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" target="_blank">instagram</a></li>
             {{/if}}
 
             {{#if twitter}}
-              <li><i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" _target="blank">twitter</a></li>
+              <li><i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" target="_blank">twitter</a></li>
             {{/if}}
         </ul>
 
     {{/with}}
 
-    {{website}}
+    <p>View event website at <a href="{{website}}">{{website}}</a></p>
     <h4>Scene</h4>
     <ul class="list-inline scene-list">
       {{#each eventScenes}}
