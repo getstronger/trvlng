@@ -10,7 +10,6 @@ less
 aldeed:autoform
 aldeed:collection2
 aldeed:simple-schema
-iron:router
 joshowens:accounts-entry
 kevbuk:moment-range
 manuelschoebel:less-bootstrap-3
@@ -18,10 +17,13 @@ manuelschoebel:less-fontawesome-4
 mquandalle:bower
 sacha:spin
 sewdn:velocityjs
-splendido:moment-twix
 mrt:moment
 mrt:urlify2
 meteorhacks:kadira
 mrt:mailchimp
 meteorhacks:zones
+iron:router
+splendido:moment-twix@0.0.3
+accounts-ui
+accounts-password
 
