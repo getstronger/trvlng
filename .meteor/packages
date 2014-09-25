@@ -13,7 +13,6 @@ aldeed:simple-schema
 joshowens:accounts-entry
 kevbuk:moment-range
 manuelschoebel:less-bootstrap-3
-manuelschoebel:less-fontawesome-4
 mquandalle:bower
 sacha:spin
 sewdn:velocityjs
@@ -26,4 +25,4 @@ iron:router
 splendido:moment-twix@0.0.3
 accounts-ui
 accounts-password
-
+pfafman:font-awesome-4

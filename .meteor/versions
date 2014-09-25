@@ -45,7 +45,6 @@ livedata@1.0.9
 localstorage@1.0.0
 logging@1.0.3
 manuelschoebel:less-bootstrap-3@0.0.2
-manuelschoebel:less-fontawesome-4@0.0.4
 meteor-platform@1.1.0
 meteor@1.1.0
 meteorhacks:inject-initial@1.0.0
@@ -67,6 +66,7 @@ npm-bcrypt@0.7.7
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 peerlibrary:urlify2@0.2.3
+pfafman:font-awesome-4@4.2.0
 random@1.0.0
 reactive-dict@1.0.2
 reactive-var@1.0.1
