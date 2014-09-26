@@ -56,15 +56,15 @@
   <div class="so-content-overlay"></div>
 
   <div class="so-content">
+
   {{> header}}
-      <div class="container">
-        {{> errors}}
-        <div id="main">
-          {{> yield}}
-        </div>
-      </div>
-      {{> footer}}
-      </div>
+
+    {{> errors}}
+    <div id="main">
+      {{> yield}}
+    </div>
+  {{> footer}}
+    </div>
   </div>
 
 </template>

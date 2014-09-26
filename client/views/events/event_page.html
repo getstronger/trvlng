@@ -1,4 +1,25 @@
 <template name="eventPage">
-  {{> eventItem}}
-  {{> eventDetails}}
+
+  <div class="event-cover">
+    <img class="event-cover-image" src="http://res.cloudinary.com/trvlng/image/upload/v1411696278/cover_beach_oalnwo.jpg">
+  </div>
+
+  <div class="event-header">
+    <div class="container">
+      <div class="event-summary">
+        <h1 class="title event-title card-title">{{name}}</h1>
+        <p>
+          <span class="city">{{location.addressLocality}}</span><br>
+          <span class="begins">{{dateRange}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <div class="event-content">
+      <div class="container">
+          {{> eventDetails}}
+      </div>
+    </div>
+
 </template>
