@@ -44,8 +44,6 @@ less@1.0.8
 livedata@1.0.9
 localstorage@1.0.0
 logging@1.0.3
-manuelschoebel:less-bootstrap-3@0.0.2
-manuelschoebel:less-fontawesome-4@0.0.4
 meteor-platform@1.1.0
 meteor@1.1.0
 meteorhacks:inject-initial@1.0.0
@@ -63,6 +61,9 @@ mrt:mailchimp@0.4.0
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
 mrt:urlify2@0.2.3
+natestrauser:font-awesome@4.2.0
+nemo64:bootstrap-data@3.2.0-rc2
+nemo64:bootstrap@3.2.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.2
 ordered-dict@1.0.0
