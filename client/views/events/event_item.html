@@ -4,6 +4,9 @@
       <div class="card-heading">
       {{#if ownEvent}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
       <a href="#" class="attend btn {{attendClass}}">{{attendText}}</a>
+        <a href="#" class="favorite btn {{attendClass}}">favorite</a>
+        <a href="#" class="watch btn {{attendClass}}">watch</a>
+        <a href="#" class="share btn {{attendClass}}">share</a>
       </div>
       <div class="card-media">
         <a href="{{pathFor 'eventPage'}}">
@@ -18,8 +21,7 @@
         </p>
         <div class="row card-actions">
           <div class="col-xs-3">
-            <i class="fa fa-fw fa-users"></i><br>
-            <a href="{{pathFor 'eventPage'}}">{{pluralize attendees "attendee"}}</a>
+            <a href="{{pathFor 'eventPage'}}">{{pluralize attendees "guy"}} going </a>
           </div>
         </div>
       </div>

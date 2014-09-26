@@ -1,9 +1,9 @@
 Template.eventDetails.helpers({
     eventScenes: function(){
-        return Scenes.find( { _id: { $in: this.scene }}, {name: 1, image: 1, _id: 0}); //find all scenes that are present in the current document's scene array
+        return Scenes.find( { _id: { $in: this.scene }}, {name: 0, image: 0, _id: 1}); //find all scenes that are present in the current document's scene array
     },
-    eventAttendees: function(){
-        return 'poop';
+    eventAttendees: function() {
+      return 'poop';
     }
   // guyView: function() { // If the user is currently logged in and has not already RSVP-ed, allow them to attend
   //   var UserId = Meteor.userId();

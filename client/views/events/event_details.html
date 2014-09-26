@@ -4,6 +4,9 @@
     <img class="img-responsive" src="http://placehold.it/1200x300&text=map">
 
     {{name}}
+    {{!--
+    {{> formatDate dateTime=startDate format='MMMM Do YYYY, h:mm:ss a'}}
+    --}}
     {{startDate}}
     <h4>Where at?</h4>
   <address>
@@ -40,12 +43,17 @@
     {{/with}}
 
     <p>View event website at <a href="{{website}}">{{website}}</a></p>
-    <h4>Scene</h4>
-    <ul class="list-inline scene-list">
-      {{#each eventScenes}}
-      <li><img class="img-circle" src="{{image}}"><span class="scene-title">{{this.name}}</span></li>
-      {{/each}}
-    </ul>
+    <div class="event-scene">
+        <h4>Scene</h4>
+        <div class="scene-list">
+          {{#each eventScenes}}
+          <div class="scene-list-item">
+            <img class="img-circle scene-image" src="{{image}}">
+            <span class="scene-name">{{this.name}}</span>
+          </div>
+          {{/each}}
+        </div>
+    </div>
     <h4>Who's going?</h4>
     {{eventAttendees}}
     {{attending}}
