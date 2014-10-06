@@ -6,3 +6,11 @@ Accounts.onCreateUser(function(options, user) {
 
   return user;
 });
+
+//Meteor.startup(function(){
+//    if (Meteor.isServer){
+//      Accounts.setPassword('kebQTzYPWaEBN8P9u', 'adminpass22');
+//      console.log('The new password for' + ' ' + 'user id:' + ' ' + 'kebQTzYPWaEBN8P9u' + ' ' + 'has been set');
+//    }
+//  }
+//);
