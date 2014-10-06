@@ -56,7 +56,7 @@
         <div class="scene-list">
           {{#each eventScenes}}
           <div class="scene-list-item">
-            <img class="img-circle scene-image" src="{{image}}">
+            <img class="img-circle scene-image" src="{{image}}&text={{this.name}}">
             <span class="scene-name">{{this.name}}</span>
           </div>
           {{/each}}
