@@ -1,5 +1,5 @@
 <template name="eventDetails">
-    {{startDate}}
+    {{formatDate startDate 'LL'}}
 <div class="row">
   <div class="event-overview col-md-6 col-md-push-3">
     <p class="event-description">{{description}}</p>
@@ -24,7 +24,7 @@
     </div>
 
 {{#if free}}
-    <div class="banner banner-free-event"><p>This even is free to attend</p></div>
+    <div class="banner banner-free-event"><p>This event is free to attend</p></div>
 {{/if}}
     <div class="event-recurrance"><p>This event occurs {{recurrance}}.</p></div>
     <div class="event-organizer"><p>This event is organized by {{organizer}}.</p></div>
@@ -62,10 +62,13 @@
           {{/each}}
         </div>
     </div>
-    <h4>Who's going?</h4>
-    {{eventAttendees}}
-    {{attending}}
+    <h2>Who's going?</h2>
     {{#if currentUser}}
+        <ul>
+        {{#each attending}}
+          <li>{{this}}</li>
+        {{/each}}
+        </ul>
         <!-- {{> guyView}} -->
     {{else}}
         <p>You need to sign in to see who will be there.</p>
