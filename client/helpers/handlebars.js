@@ -1,4 +1,4 @@
-Template.registerHelper('pluralize', function(n, thing) {
+UI.registerHelper('pluralize', function(n, thing) {
   // fairly stupid pluralizer
   if (n === 1) {
     return '1 ' + thing;
@@ -7,7 +7,7 @@ Template.registerHelper('pluralize', function(n, thing) {
   }
 });
 
-Template.registerHelper('activeRouteClass', function(/* route names */) {
+UI.registerHelper('activeRouteClass', function(/* route names */) {
   var args = Array.prototype.slice.call(arguments, 0);
   args.pop();
   
@@ -18,6 +18,6 @@ Template.registerHelper('activeRouteClass', function(/* route names */) {
   return active && 'active';
 });
 
-Template.registerHelper("formatDate", function(datetime, format) {
+UI.registerHelper("formatDate", function(datetime, format) {
   return moment(datetime).format(format);
 });
