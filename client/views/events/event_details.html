@@ -16,10 +16,10 @@
             {{location.neighborhood}}<br>
             {{location.addressLocality}}, {{location.addressRegion}}
         </address>
+          {{> linkGetDirections}}
       </div>
       <div class="col-md-8 event-location-map">
         <img class="img-responsive" src="http://placehold.it/1200x300&text=map">
-        <a href="" class="event-directions-link">Get directions</a>
       </div>
     </div>
 
@@ -30,27 +30,71 @@
     <div class="event-organizer"><p>This event is organized by {{organizer}}.</p></div>
 
     {{#with social}}
-        <ul class="event-social-list fa-ul list-unstyled">
+        <ul class="event-social-list list-unstyled list-inline">
             {{#if facebook}}
-              <li><i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" target="_blank">facebook</a> </li>
+              <li>
+                <!--<i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" target="_blank">facebook</a>-->
+                <a href="{{facebook}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                  <span class="sr-only">facebook</span>
+                </a>
+              </li>
             {{/if}}
 
             {{#if googleplus}}
-              <li><i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" target="_blank">google+</a></li>
+              <li>
+                <!--<i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" target="_blank">google+</a>-->
+                <a href="{{googleplus}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+                  <span class="sr-only">google plus</span>
+                </a>
+              </li>
             {{/if}}
 
             {{#if instagram}}
-              <li><i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" target="_blank">instagram</a></li>
+              <li>
+                <!--<i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" target="_blank">instagram</a></li>-->
+                <a href="{{instagram}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+                  <span class="sr-only">instagram</span>
+                </a>
+                </li>
             {{/if}}
 
             {{#if twitter}}
-              <li><i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" target="_blank">twitter</a></li>
+              <li>
+                <!--<i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" target="_blank">twitter</a>-->
+                <a href="{{twitter}}" target="_blank">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
             {{/if}}
         </ul>
 
     {{/with}}
 
-    <p>View event website at <a href="{{website}}">{{website}}</a></p>
+    <p>
+      <a href="{{website}}">
+        <span class="fa-stack fa-3x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+        </span>
+      <span class="sr-only">View event website at </span>
+      {{domain website}}
+      </a></p>
     <div class="event-scene">
         <h2>Scene</h2>
         <div class="scene-list">
