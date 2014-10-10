@@ -14,28 +14,34 @@
 </div> -->
 <!-- Local Navigation -->
 <div class="row bar bar-standard bar-static">
-  <div class="col-xs-12">
-    <ul class="nav nav-pills nav-justified">
-      <li class="{{activeRouteClass 'home' 'newEvents'}}">
-        <a href="{{pathFor 'newEvents'}}">New</a>
-      </li>
-      <li class="{{activeRouteClass  'bestEvents'}}">
-        <a href="{{pathFor 'bestEvents'}}">Best</a>
-      </li>
-      <li class="{{activeRouteClass  'filterEvents'}}">
-        <a href="{{pathFor 'filterEvents'}}">Filter</a>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="col-xs-12">
+      <ul class="nav nav-pills nav-justified">
+        <li class="{{activeRouteClass 'home' 'newEvents'}}">
+          <a href="{{pathFor 'newEvents'}}">New</a>
+        </li>
+        <li class="{{activeRouteClass  'bestEvents'}}">
+          <a href="{{pathFor 'bestEvents'}}">Best</a>
+        </li>
+        <li class="{{activeRouteClass  'filterEvents'}}">
+          <a href="{{pathFor 'filterEvents'}}">Filter</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
-  <ul class="events-list card-stack">
-    {{#each events}}
-    <li class="card-stack-item">
-      {{> eventItem}}
-    </li>
-    {{/each}}
-  </ul>
+<div class="row">
+    <div class="container">
+      <ul class="events-list card-stack">
+        {{#each events}}
+        <li class="card-stack-item">
+          {{> eventItem}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+</div>
     {{#if nextPath}}
       <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
       {{else}}
