@@ -2,11 +2,6 @@ Template.eventItem.helpers({
   ownEvent: function() { // Detect if the current user owns this event
     return this.userId == Meteor.userId();
   },
-  domain: function() { // Display the domain of the event's external website
-    var a = document.createElement('a');
-    a.href = this.website;
-    return a.hostname;
-  },
   dateRange: function(){ // Humanize the start and end date of this event
   var startTime = this.startDate;
   var endTime = this.endDate;
