@@ -42,9 +42,13 @@
       </ul>
     </div>
 </div>
-    {{#if nextPath}}
-      <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
+  <div class="row">
+    <div class="container">
+      {{#if nextPath}}
+        <a class="load-more btn btn-secondary btn-block btn-lg" href="{{nextPath}}">Load more</a>
       {{else}}
-      <p class="text-centered">You've reached the end of the events</p>
-    {{/if}}
+        <p class="text-centered">You've reached the end of the events</p>
+      {{/if}}
+    </div>
+  </div>
 </template>
