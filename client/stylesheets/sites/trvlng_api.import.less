@@ -506,7 +506,6 @@
         getGradientArray: function () {
           return this.gradientArray;
         },
-        // This is just me testing some JavaScript stuff.
         getGradient: function(num) {
 
         var buildGradient = function(startColor, endColor, degree){
@@ -546,6 +545,11 @@
 
         },
 
+        // Just using this to test the JS api
+        getContent: function () {
+        return ("You got your content!");
+        },
+
         // When executing a JavaScript expression, you can only execute one expression
         // at a time (ie, no semi-colons). Unless, you are in a function. The point of
         // the run() function is to allow the calling context a way to enter a function
@@ -553,6 +557,7 @@
         // only argument to the given callback.
         // --
         // NOTE: The callback MUST RETURN A VALUE so that LESS can get the value of it.
+
         run: function( callback ) {
             return( callback( api ) );
         }

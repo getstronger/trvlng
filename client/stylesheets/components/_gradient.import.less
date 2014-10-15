@@ -1,29 +1,33 @@
 // ---------------------------------------------------------- //
 // ---------------------------------------------------------- //
-@gradientLibraryLength: `api.run(function( api ) {
-    tempArray = api.gradientArray;
-    arrayLength = tempArray.length;
-    return arrayLength-1;
-})`;
+//@gradientLibraryLength: `api.run(function( api ) {
+//    tempArray = api.gradientArray;
+//    arrayLength = tempArray.length;
+//    return arrayLength-1;
+//})`;
+//
+//
+//.generate-gradients(@n, @i: 1) when (@i =< @n) {
+//    .bg-gradient-@{i} {
+//       #gradient > .directional(
+//            @start-color: ~`api.run(function( api ) {
+//                tempArray = api.gradientArray;
+//                startColor = tempArray[@{i}].colour1;
+//                return startColor;
+//            })`,
+//            @end-color:~`api.run(function( api ) {
+//                tempArray = api.gradientArray;
+//                startColor = tempArray[@{i}].colour2;
+//                return startColor;
+//            })`,
+//            @deg: 45deg
+//        );
+//    }
+//    .generate-gradients(@n, (@i + 1));
+//}
+//
+//.generate-gradients(@gradientLibraryLength);
 
-
-.generate-gradients(@n, @i: 1) when (@i =< @n) {
-    .bg-gradient-@{i} {
-       #gradient > .directional(
-            @start-color: ~`api.run(function( api ) {
-                tempArray = api.gradientArray;
-                startColor = tempArray[@{i}].colour1;
-                return startColor;
-            })`,
-            @end-color:~`api.run(function( api ) {
-                tempArray = api.gradientArray;
-                startColor = tempArray[@{i}].colour2;
-                return startColor;
-            })`,
-            @deg: 45deg
-        );
-    }
-    .generate-gradients(@n, (@i + 1));
+body:before{
+  content: `api.getContent()`;
 }
-
-.generate-gradients(@gradientLibraryLength);
