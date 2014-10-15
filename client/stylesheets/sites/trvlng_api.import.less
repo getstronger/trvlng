@@ -506,44 +506,6 @@
         getGradientArray: function () {
           return this.gradientArray;
         },
-        getGradient: function(num) {
-
-        var buildGradient = function(startColor, endColor, degree){
-          var gradientString =
-          'background-repeat: repeat-x;' +
-          'background-image: -webkit-linear-gradient(' + degree + ', ' + startColor + ', ' + endColor +');' +
-          'background-image: -o-linear-gradient(' + degree + ', ' + startColor + ', ' + endColor + ');' +
-          'background-image: linear-gradient(' + degree + ', ' + startColor + ', ' + endColor +');';
-          return gradientString
-        };
-
-//        var gradientList = '';
-//        for (i=0; i<gradientArray.length; i++){
-//          var startColor = gradientArray[i].colour1;
-//          var endColor = gradientArray[i].colour2;
-//          var degree = '45deg';
-//          var currentGradient = buildGradient(startColor, endColor, degree);
-//          gradientList = gradientList + '.bg-gradient-' + (i+1) + '{' + currentGradient + '}';
-//        }
-
-          var startColor = this.gradientArray[num].colour1;
-          var endColor = this.gradientArray[num].colour2;
-          var degree = '45deg';
-          var currentGradient = buildGradient(startColor, endColor, degree);
-
-        return currentGradient;
-
-        // buildGradient is based off of the #gradient > .directional bootstrap mixin
-        /*
-            .directional(@start-color: #555; /*@end-color: #333; @deg: 45deg) {
-            background-repeat: repeat-x;
-            background-image: -webkit-linear-gradient(@deg, @start-color, @end-color); // Safari 5.1-6, Chrome 10+
-            background-image: -o-linear-gradient(@deg, @start-color, @end-color); // Opera 12
-            background-image: linear-gradient(@deg, @start-color, @end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
-            }
-        */
-
-        },
 
         // Just using this to test the JS api
         getContent: function () {
