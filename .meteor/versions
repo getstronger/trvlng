@@ -3,13 +3,13 @@ accounts-password@1.0.3
 accounts-ui-unstyled@1.1.3
 accounts-ui@1.1.2
 aldeed:autoform@3.2.0
-aldeed:collection2@2.1.0
+aldeed:collection2@2.2.0
 aldeed:simple-schema@1.0.3
 application-configuration@1.0.3
 autopublish@1.0.1
 autoupdate@1.1.2
 base64@1.0.1
-bengott:avatar@0.1.3
+bengott:avatar@0.1.4
 binary-heap@1.0.1
 blaze-tools@1.0.1
 blaze@2.0.2
@@ -41,6 +41,7 @@ joshowens:shareit@0.2.0
 joshowens:simple-form@0.1.8
 jparker:crypto-core@0.1.0
 jparker:crypto-md5@0.1.1
+jparker:gravatar@0.3.0
 jquery@1.0.1
 json@1.0.1
 kevbuk:moment-range@1.0.1
@@ -52,7 +53,7 @@ meteor-platform@1.1.2
 meteor@1.1.2
 meteorhacks:inject-initial@1.0.0
 meteorhacks:kadira-binary-deps@1.2.0
-meteorhacks:kadira@2.11.9
+meteorhacks:kadira@2.11.11
 meteorhacks:zones@1.3.2
 minifiers@1.1.1
 minimongo@1.0.4
