@@ -1,120 +1,141 @@
 <template name="eventDetails">
-    {{formatDate startDate 'LL'}}
-<div class="row">
-  <div class="event-overview col-md-6 col-md-push-3">
-    <p class="event-description">{{description}}</p>
-  </div>
-</div>
-
-
-    <h2>Get There</h2>
-    <div class="row">
-      <div class="col-md-4 event-location">
-        <address>
-          <strong>{{location.name}}</strong><br>
-            {{location.streetAddress}}<br>
-            {{location.neighborhood}}<br>
-            {{location.addressLocality}}, {{location.addressRegion}}
-        </address>
-          {{> linkGetDirections}}
-      </div>
-      <div class="col-md-8 event-location-map">
-        <img class="img-responsive" src="http://placehold.it/1200x300&text=map">
-      </div>
+  <div class="row">
+    <div class="event-overview col-md-6 col-md-push-3">
+      <p class="event-description">{{description}}</p>
     </div>
+  </div>
 
-{{#if free}}
-    <div class="banner banner-free-event"><p>This event is free to attend</p></div>
-{{/if}}
-    <div class="event-recurrance"><p>This event occurs {{recurrance}}.</p></div>
-    <div class="event-organizer"><p>This event is organized by {{organizer}}.</p></div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Get There</h2>
+    </div>
+    <div class="col-md-4 event-location">
+      <address>
+        <strong>{{location.name}}</strong><br>
+          {{location.streetAddress}}<br>
+          {{location.neighborhood}}<br>
+          {{location.addressLocality}}, {{location.addressRegion}}
+      </address>
+        {{> linkGetDirections}}
+    </div>
+    <div class="col-md-8 event-location-map">
+      <img class="img-responsive" src="http://placehold.it/1200x300&text=map">
+    </div>
+  </div>
 
-    {{#with social}}
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Some helpful info</h2>
+      {{#if free}}
+        <div class="banner banner-free-event"><p>This event is free to attend</p></div>
+      {{/if}}
+      <div class="event-recurrance"><p>This event occurs {{recurrance}}.</p></div>
+      <div class="event-organizer"><p>This event is organized by {{organizer}}.</p></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      {{#with social}}
         <ul class="event-social-list list-unstyled list-inline">
-            {{#if facebook}}
-              <li>
-                <!--<i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" target="_blank">facebook</a>-->
-                <a href="{{facebook}}" target="_blank" rel="external">
+          {{#if facebook}}
+            <li>
+              <!--<i class="fa-li fa fa-facebook-square"></i> Find this event on <a href="{{facebook}}" target="_blank">facebook</a>-->
+              <a href="{{facebook}}" target="_blank" rel="external">
                 <span class="fa-stack fa-3x">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                 </span>
-                  <span class="sr-only">facebook</span>
-                </a>
-              </li>
-            {{/if}}
+                <span class="sr-only">facebook</span>
+              </a>
+            </li>
+          {{/if}}
 
-            {{#if googleplus}}
-              <li>
-                <!--<i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" target="_blank">google+</a>-->
-                <a href="{{googleplus}}" target="_blank" rel="external">
+          {{#if googleplus}}
+            <li>
+              <!--<i class="fa-li fa fa-google-plus-square"></i> Find this event on <a href="{{googleplus}}" target="_blank">google+</a>-->
+              <a href="{{googleplus}}" target="_blank" rel="external">
                 <span class="fa-stack fa-3x">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
                 </span>
-                  <span class="sr-only">google plus</span>
-                </a>
-              </li>
-            {{/if}}
+                <span class="sr-only">google plus</span>
+              </a>
+            </li>
+          {{/if}}
 
-            {{#if instagram}}
-              <li>
-                <!--<i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" target="_blank">instagram</a></li>-->
-                <a href="{{instagram}}" target="_blank" rel="external">
+          {{#if instagram}}
+            <li>
+              <!--<i class="fa-li fa fa-instagram-square"></i> Find this event on <a href="{{instagram}}" target="_blank">instagram</a></li>-->
+              <a href="{{instagram}}" target="_blank" rel="external">
                 <span class="fa-stack fa-3x">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                 </span>
-                  <span class="sr-only">instagram</span>
-                </a>
-                </li>
-            {{/if}}
+                <span class="sr-only">instagram</span>
+              </a>
+            </li>
+          {{/if}}
 
-            {{#if twitter}}
-              <li>
-                <!--<i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" target="_blank">twitter</a>-->
-                <a href="{{twitter}}" target="_blank" rel="external">
+          {{#if twitter}}
+            <li>
+              <!--<i class="fa-li fa fa-twitter-square"></i> Find this event on <a href="{{twitter}}" target="_blank">twitter</a>-->
+              <a href="{{twitter}}" target="_blank" rel="external">
                 <span class="fa-stack fa-3x">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                 </span>
-                  <span class="sr-only">twitter</span>
-                </a>
-              </li>
-            {{/if}}
+                <span class="sr-only">twitter</span>
+              </a>
+            </li>
+          {{/if}}
         </ul>
-
-    {{/with}}
-
-    <p>
-      <a href="{{website}}">
+      {{/with}}
+      <p>
+        <a href="{{website}}">
         <span class="fa-stack fa-3x">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
         </span>
-      <span class="sr-only">View event website at </span>
-      {{domain website}}
-      </a></p>
-    <div class="event-scene">
-        <h2>Scene</h2>
+          <span class="sr-only">View event website at </span>
+          Visit {{domain website}}
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Scene</h2>
+      <div class="event-scene">
         <div class="scene-list">
           {{#each eventScenes}}
-          <div class="scene-list-item">
-            <img class="img-circle scene-image" src="{{image}}&text={{this.name}}">
-            <span class="scene-name">{{this.name}}</span>
-          </div>
+            <div class="scene-list-item">
+              <div class="scene-tile">
+                <span class="scene-name">{{this.name}}</span>
+              </div>
+            </div>
           {{/each}}
         </div>
+      </div>
     </div>
-    <h2>Who's going?</h2>
-    {{#if currentUser}}
-        <ul>
-        {{#each attending}}
-          <li>{{this}}</li>
-        {{/each}}
-        </ul>
-        <!-- {{> guyView}} -->
-    {{else}}
-        <p>You need to sign in to see who will be there.</p>
-    {{/if}}
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Who's going?</h2>
+      <div class="event-attendees">
+        {{#if currentUser}}
+          <ul>
+            {{#each attending}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <!--{{> guyView}}-->
+        {{else}}
+          <p>You need to sign in to see who will be there.</p>
+        {{/if}}
+      </div>
+      <!--/.event-attendees-->
+    </div>
+  </div>
 </template>

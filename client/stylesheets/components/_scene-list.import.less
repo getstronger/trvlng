@@ -1,4 +1,4 @@
-.event-scene{
+.scene-list{
   .make-row();
   .clearfix();
 }
@@ -6,12 +6,39 @@
 .scene-list-item{
   .make-xs-column(3);
   .make-md-column(2);
-  text-align: center;
 }
 
-.scene-image{
-  .img-responsive();
+.scene-tile{
+  background-color: mediumpurple;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  &:before {
+    content: "";
+    float: left;
+    //essentially the aspect ratio. 100% means the
+    //div will remain 100% as tall as it is wide, or
+    //square in other words.
+    padding-bottom: 100%;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 .scene-name{
-  display: inline-block;
+  position: absolute;
+  right:0;
+  bottom: 0;
+  max-width: 100%;
+  margin-bottom:-0.3em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+
+  color: #FFF;
 }
