@@ -27,6 +27,13 @@ Template.eventItem.helpers({
     } else {
       return 'attend';
     }
+  },
+  gradientClass: function(){
+    var getRandom = function(min, max) {
+      return Math.random() * (max - min) + min;
+    };
+    gradientId = Math.round(getRandom(1,98));
+    return 'bg-gradient-' + gradientId;
   }
 });
 
