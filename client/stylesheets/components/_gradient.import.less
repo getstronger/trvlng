@@ -27,15 +27,21 @@
 .generate-gradients(@gradientLibraryLength);
 
 // Test 1
+//
+// This also serves as a crazy hack.
+// When compiling meteor, remove the actual gradient generation code at launch.
+// Leave this test in tact.
+// Add gradient generation, and recompile less / refresh client.
+// TODO: Find out WTF is causing the Less/JS API issue from happening.
 
-//body:before{
-//  content: `api.getContent()`;
-//}
+body:before{
+  content: `api.getContent()`;
+}
 
 // Test 2
 
-body:before{
-  content: `api.run(function(api){
-    return(api.getGradientArray().length);
-  })`;
-}
+//body:before{
+//  content: `api.run(function(api){
+//    return(api.getGradientArray().length);
+//  })`;
+//}
