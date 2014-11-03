@@ -1,5 +1,5 @@
-Conversations = new Meteor.Collection('conversations');
-//Scenes.attachSchema(Schemas.scene);
+Chats = new Meteor.Collection('chats');
+Chats.attachSchema(Schemas.chat);
 
 //_id:
 //createdAt:
