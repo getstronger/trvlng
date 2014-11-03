@@ -107,75 +107,80 @@ if (Meteor.isServer) {
         }
       }
 
-        // Fixture Data Events
-        // Users must be present
-        if (Events.find().count() === 0) {
-            var sceneIds = Scenes.find({}).fetch();
-            var createdByIds = Meteor.users.find({}).fetch();
+      // Fixture Data Events
+      // Users must be present
+      if (Events.find().count() === 0) {
+          var sceneIds = Scenes.find({}).fetch();
+          var createdByIds = Meteor.users.find({}).fetch();
 
-            var trvlngID = Events.insert({
-                createdBy: createdByIds[0]._id,
-                name: 'Introducing Telescope',
-                description: "This is the description. It is awesome.",
-                type: "Festival",
-                // customType: "",
-                scene: [sceneIds[0]._id],
-                free: true,
-                // cost: 0,
-                organizer: "me",
-                status: "scheduled",
-                website: 'http://sachagreif.com/introducing-telescope/',
-                startDate: new Date(),
-                endDate: new Date(),
-                recurrance: "one time",
-                location: {
-                    streetAddress: "9 Columbus Square",
-                    neighborhood: "gayborhood",
-                    addressLocality: "Philadelphia",
-                    addressRegion: "PA",
-                    postalCode: "19012"
-                },
-                social: {
-                    facebook: "http://facebook.com/You",
-                    twitter: "http://twitter.com/You",
-                    googleplus: "http://plus.google.com/You",
-                    instagram: "http://instagram.com/you"
-                    // hashtag: "you"
-                },
-                attending: [[createdByIds[0]._id]],
-                attendees: 1
+          var trvlngID = Events.insert({
+              createdBy: createdByIds[0]._id,
+              name: 'Introducing Telescope',
+              description: "This is the description. It is awesome.",
+              type: "Festival",
+              // customType: "",
+              scene: [sceneIds[0]._id],
+              free: true,
+              // cost: 0,
+              organizer: "me",
+              status: "scheduled",
+              website: 'http://sachagreif.com/introducing-telescope/',
+              startDate: new Date(),
+              endDate: new Date(),
+              recurrance: "one time",
+              location: {
+                  streetAddress: "9 Columbus Square",
+                  neighborhood: "gayborhood",
+                  addressLocality: "Philadelphia",
+                  addressRegion: "PA",
+                  postalCode: "19012"
+              },
+              social: {
+                  facebook: "http://facebook.com/You",
+                  twitter: "http://twitter.com/You",
+                  googleplus: "http://plus.google.com/You",
+                  instagram: "http://instagram.com/you"
+                  // hashtag: "you"
+              },
+              attending: [[createdByIds[0]._id]],
+              attendees: 1
 
-            });
+          });
 
-            // Comments.insert({
-            //   eventId: telescopeId,
-            //   userId: anthony._id,
-            //   author: anthony.profile.name,
-            //   submitted: now - 5 * 3600 * 1000,
-            //   body: 'Interesting project Sacha, can I get involved?'
-            // });
+          // Comments.insert({
+          //   eventId: telescopeId,
+          //   userId: anthony._id,
+          //   author: anthony.profile.name,
+          //   submitted: now - 5 * 3600 * 1000,
+          //   body: 'Interesting project Sacha, can I get involved?'
+          // });
 
-            // Comments.insert({
-            //   eventId: telescopeId,
-            //   userId: jon._id,
-            //   author: jon.profile.name,
-            //   submitted: now - 3 * 3600 * 1000,
-            //   body: 'You sure can Tom!'
-            // });
+          // Comments.insert({
+          //   eventId: telescopeId,
+          //   userId: jon._id,
+          //   author: jon.profile.name,
+          //   submitted: now - 3 * 3600 * 1000,
+          //   body: 'You sure can Tom!'
+          // });
 
-            // for (var i = 0; i < 10; i++) {
-            //   Events.insert({
-            //     name: 'Sample Event #' + i,
-            //     // createdBy: brad.profile.name,
-            //     createdBy: brad._id,
-            //     url: 'http://google.com/?q=test-' + i,
-            //     submitted: now - i * 3600 * 1000 + 1,
-            //     commentsCount: 0,
-            //     upvoters: [],
-            //     votes: 0
-            //   });
-            // }
-        }
+          // for (var i = 0; i < 10; i++) {
+          //   Events.insert({
+          //     name: 'Sample Event #' + i,
+          //     // createdBy: brad.profile.name,
+          //     createdBy: brad._id,
+          //     url: 'http://google.com/?q=test-' + i,
+          //     submitted: now - i * 3600 * 1000 + 1,
+          //     commentsCount: 0,
+          //     upvoters: [],
+          //     votes: 0
+          //   });
+          // }
+      }
+
+      // Fixture Data Chats
+      if (Chats.find().count() === 0) {
+        Chats.insert({});
+      }
 
 
 

@@ -8,4 +8,3 @@ Conversations = new Meteor.Collection('conversations');
 //owner:
 //picture:
 //lastUpdated:
-

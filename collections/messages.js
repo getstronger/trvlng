@@ -1,9 +1,10 @@
 Messages = new Meteor.Collection('messages');
+Messages.attachSchema(Schemas.message);
 
 //_id:
 //createdAt:
 //author: ''
-//conversation: ''
+//chat: ''
 //sent:
 //seenBy: []
 //location:
