@@ -1,31 +1,3 @@
-// ---------------------------------------------------------- //
-// ---------------------------------------------------------- //
-@gradientLibraryLength:`api.run(function(api){
-  return((api.getGradientArray().length)-1);
-})`;
-
-
-.generate-gradients(@n, @i: 1) when (@i =< @n) {
-    .bg-gradient-@{i} {
-       #gradient > .directional(
-            @start-color: ~`api.run(function( api ) {
-                tempArray = api.gradientArray;
-                startColor = tempArray[@{i}].colour1;
-                return startColor;
-            })`,
-            @end-color:~`api.run(function( api ) {
-                tempArray = api.gradientArray;
-                startColor = tempArray[@{i}].colour2;
-                return startColor;
-            })`,
-            @deg: 45deg
-        );
-    }
-    .generate-gradients(@n, (@i + 1));
-}
-
-.generate-gradients(@gradientLibraryLength);
-
 // Test 1
 //
 // This also serves as a crazy hack.
@@ -34,9 +6,9 @@
 // Add gradient generation, and recompile less / refresh client.
 // TODO: Find out WTF is causing the Less/JS API issue from happening.
 
-body:before{
-  content: `api.getContent()`;
-}
+//body:before{
+//  content: `api.getContent()`;
+//}
 
 // Test 2
 
@@ -45,3 +17,30 @@ body:before{
 //    return(api.getGradientArray().length);
 //  })`;
 //}
+
+// ---------------------------------------------------------- //
+// ---------------------------------------------------------- //
+//@gradientLibraryLength:`api.run(function(api){
+//  return((api.getGradientArray().length)-1);
+//})`;
+
+//.generate-gradients(@n, @i: 1) when (@i =< @n) {
+//  .bg-gradient-@{i} {
+//    #gradient > .directional(
+//    @start-color: ~`api.run(function( api ) {
+//      tempArray = api.gradientArray;
+//      startColor = tempArray[@{i}].colour1;
+//      return startColor;
+//    })`,
+//    @end-color:~`api.run(function( api ) {
+//      tempArray = api.gradientArray;
+//      startColor = tempArray[@{i}].colour2;
+//      return startColor;
+//    })`,
+//    @deg: 45deg
+//    );
+//  }
+//  .generate-gradients(@n, (@i + 1));
+//}
+//
+//.generate-gradients(@gradientLibraryLength);
