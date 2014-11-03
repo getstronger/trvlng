@@ -5,7 +5,7 @@
     <div class="so-menu-content so-l-content">
       <ul class="nav navbar-nav">
         <li class="{{activeRouteClass 'home' 'newEvents'}}">
-          <a href="{{pathFor 'newEvents'}}">Events</a>
+          <a href="{{pathFor 'eventsList'}}">Events</a>
         </li>
         <li class="{{activeRouteClass  'guys'}}">
           <a href="{{pathFor 'guys'}}">Guys</a>
@@ -15,7 +15,9 @@
           <a href="{{pathFor 'eventSubmit'}}">Submit Event</a>
         </li>
         {{/if}}
-        {{> accountButtons}}
+        <li >
+          <a href="{{pathFor 'signin'}}">Sign in</a>
+        </li>
     </ul>
     </div>
   </aside>
