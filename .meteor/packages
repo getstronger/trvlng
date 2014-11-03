@@ -10,7 +10,6 @@ less
 aldeed:autoform
 aldeed:collection2
 aldeed:simple-schema
-joshowens:accounts-entry
 kevbuk:moment-range
 mquandalle:bower
 sacha:spin
@@ -29,4 +28,3 @@ natestrauser:font-awesome
 bengott:avatar
 zeroasterisk:google-maps-server
 joshowens:shareit
-
