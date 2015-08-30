@@ -1,6 +1,9 @@
 if (Meteor.isServer) {
     Meteor.startup(function () {
-
+      if (Meteor.users.find().count() > 0) {
+        var brad = Meteor.users.findOne({username: "bradstrong"});
+        Accounts.setPassword(brad._id, 'Trvlng11');
+      }
 
 // Fixture Data Users
         if (Meteor.users.find().count() === 0) {

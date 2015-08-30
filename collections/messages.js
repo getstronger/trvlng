@@ -1,5 +1,5 @@
-Messages = new Meteor.Collection('messages');
-Messages.attachSchema(Schemas.message);
+Messages = new Mongo.Collection('messages');
+Messages.attachSchema(Schemas.Message);
 
 //_id:
 //createdAt:

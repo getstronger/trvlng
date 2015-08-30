@@ -85,4 +85,19 @@
       </div>
     </div>
   </div>
+
+  <div>
+
+    {{#autoForm collection="Messages" id="insertMessageForm" type="insert"}}
+      <fieldset>
+        <legend>Add a Book</legend>
+        {{> afQuickField name='author'}}
+        {{> afQuickField name='chat'}}
+        {{> afQuickField name='seenby'}}
+        {{> afQuickField name='sent'}}
+        {{> afQuickField name='content'}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+  </div>
 </template>

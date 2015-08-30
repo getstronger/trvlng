@@ -1,5 +1,5 @@
-Chats = new Meteor.Collection('chats');
-Chats.attachSchema(Schemas.chat);
+Chats = new Mongo.Collection('chats');
+Chats.attachSchema(Schemas.Chat);
 
 //_id:
 //createdAt:
